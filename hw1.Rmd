@@ -5,6 +5,11 @@ date: '2022-04-01'
 ---
 
 ```{r setup, include=FALSE}
+library(knitr)
+library(tidyverse)
+library(tidymodels)
+library(ISLR)
+library(ggplot2)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -28,11 +33,64 @@ plot(pressure)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
+Question 1:
+Define supervised and unsupervised learning. What are the difference(s) between them?
+
+In supervised learning, input data is provided to the model along with the output. 
+In unsupervised learning, only input data is provided to the model.
+
+Question 2:
+Explain the difference between a regression model and a classification model, specifically in the context of machine learning.
+
+Regression helps predict a continuous quantity (Y is quantitative), 
+classification predicts discrete class labels, Categorical values (Y is qualitative)
+
+
+Question 3:
+Name two commonly used metrics for regression ML problems. Name two commonly used metrics for classification ML problems.
+
+Regression model: Mean Squared Error (MSE). Root Mean Squared Error (RMSE).
+classification model :confusion matrix, log-loss
+
+
+Question 4:
+As discussed, statistical models can be used for different purposes. These purposes can generally be classified into the following three categories. Provide a brief description of each.    
+
+Descriptive models:Choose model to best visually emphasize a trend in data i.e., using a line on a scatterplot
+
+Inferential models:Aim is to test theories (Possibly) causal claims State relationship between outcome & predictor(s)
+
+Predictive models:Aim is to predict Y with minimum reducible error Not focused on hypothesis tests 
+(Lecture note day2)
+
+Question 5:
+Predictive models are frequently used in machine learning, and they can usually be described as either mechanistic or empirically-driven. Answer the following questions.
+
+Define mechanistic. Define empirically-driven. How do these model types differ? How are they similar?
+
+In general, is a mechanistic or empirically-driven model easier to understand? Explain your choice.
+
+Describe how the bias-variance tradeoff is related to the use of mechanistic or empirically-driven models.
+
+
+
+Question 6:
+A political candidate’s campaign has collected some detailed voter history data from their constituents. The campaign is interested in two questions:
+
+Given a voter’s profile/data, how likely is it that they will vote in favor of the candidate?
+
+How would a voter’s likelihood of support for the candidate change if they had personal contact with the candidate?
+
+Classify each question as either predictive or inferential. Explain your reasoning for each.
+
+
+
+
+
 
 
 ```{r}
 library(tidyverse)
 library(tidymodels)
 library(ISLR)
-
 ```
