@@ -124,46 +124,32 @@ Which variables are positively or negatively correlated with which others? Do th
 ```
 
 
+Exercise 6:
 
-```{r, echo=FALSE} 
+```{r} 
  mpg %>% 
  ggplot() + 
  geom_boxplot(mapping = aes(x = class, y = hwy)) + 
- geom_jitter(mapping = aes(x = class, y = hwy),  alpha = .25,  height = 0) + 
+ geom_jitter(mapping = aes(x = class, y = hwy),  alpha = 0.26,  height = 0) + 
  theme_gdocs() + 
  labs(x = "Vehicle Class", y = "Highway MPG") + 
  coord_flip() 
 ``` 
+ Exercise 7
  
- 
- 
-#### Exercise 6: 
-   Recreate the following graphic, as closely as you can. *Hint: Use the `ggthemes` package.* 
-   ```{r, echo=FALSE} 
- mpg %>% 
- ggplot() + 
- geom_boxplot(mapping = aes(x = class, y = hwy)) + 
- geom_jitter(mapping = aes(x = class, y = hwy),  
- alpha = .25,  
- height = 0) + 
- theme_gdocs() + 
- labs(x = "Vehicle Class", y = "Highway MPG") + 
- coord_flip() 
- ``` 
-   #### Exercise 7 
-   Recreate the following graphic. 
-   ```{r, echo=FALSE} 
+```{r} 
  mpg %>% 
  ggplot() +  
  geom_boxplot(mapping=aes(x = class, y = hwy, fill = drv)) 
- ``` 
-   #### Exercise 8 
-   Recreate the following graphic. 
-   ```{r, echo=FALSE} 
+``` 
+ 
+ Exercise 8
+```{r} 
  mpg %>% 
  ggplot(mapping = aes(x = displ, y = hwy)) +  
  geom_point(aes(color = drv)) + 
  geom_smooth(aes(linetype = drv), se = FALSE) 
- ``` 
- d
+``` 
+ 
+
 
