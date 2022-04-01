@@ -10,6 +10,7 @@ library(tidyverse)
 library(tidymodels)
 library(ISLR)
 library(ggplot2)
+library(ggthemes)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -89,7 +90,7 @@ Exercise 1:
 We are interested in highway miles per gallon, or the hwy variable. Create a histogram of this variable. Describe what you see/learn.
 
 ```{r}
-
+install.packages("ggthemes")
 ```
 
 Exercise 2:
@@ -123,6 +124,19 @@ Which variables are positively or negatively correlated with which others? Do th
 ```
 
 
+
+```{r, echo=FALSE} 
+ mpg %>% 
+ ggplot() + 
+ geom_boxplot(mapping = aes(x = class, y = hwy)) + 
+ geom_jitter(mapping = aes(x = class, y = hwy),  alpha = .25,  height = 0) + 
+ theme_gdocs() + 
+ labs(x = "Vehicle Class", y = "Highway MPG") + 
+ coord_flip() 
+``` 
+ 
+ 
+ 
 #### Exercise 6: 
    Recreate the following graphic, as closely as you can. *Hint: Use the `ggthemes` package.* 
    ```{r, echo=FALSE} 
