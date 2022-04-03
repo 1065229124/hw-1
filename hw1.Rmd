@@ -84,14 +84,19 @@ How would a voter’s likelihood of support for the candidate change if they had
 
 Classify each question as either predictive or inferential. Explain your reasoning for each.
 
+*For the first question, it is predictive, which the response can be probablity.
+*For the second question, it is  is inferential, the response will contain relationship between outcome and predictors.
+
 
 
 Exercise 1:
 We are interested in highway miles per gallon, or the hwy variable. Create a histogram of this variable. Describe what you see/learn.
 
 ```{r}
-install.packages("ggthemes")
+ggplot(mpg, aes(x=hwy)) + geom_histogram()+
+labs(x="Highway MPG", title="Histogram of Highway Miles per Gallon")
 ```
+“Highway Miles per Gallon” is plotted on the x-axis and its count is plotted on the y-axis. 25-30 Gallon has the highest count, and  and most of the highway miles per gallon is in 15-30Gallon
 
 Exercise 2:
 Create a scatterplot. Put hwy on the x-axis and cty on the y-axis. Describe what you notice. Is there a relationship between hwy and cty? What does this mean?
