@@ -52,7 +52,11 @@ Predictive models are frequently used in machine learning, and they can usually 
 
 Define mechanistic. Define empirically-driven. How do these model types differ? How are they similar?
 
+**Mechanistic: Assume a parametric form for f ;Won’t match true unknown f ;Can add parameters =more flexibility ;Too many = overfitting**
+**empirically-driven: No assumptions about f;Require a larger number of observations; Much more flexible by default; Overfitting**
 In general, is a mechanistic or empirically-driven model easier to understand? Explain your choice.
+**For me mechanistic model is more understandable, we can use theory to make a prediction if society has lots of information about that event. **
+
 
 Describe how the bias-variance tradeoff is related to the use of mechanistic or empirically-driven models.
 
